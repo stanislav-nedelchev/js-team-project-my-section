@@ -1,7 +1,7 @@
 @import url('swiper/css/bundle');
 
 .projects {
-  padding-top: 64px;
+  padding: 32px 0;
 }
 
 .projects-section-title {
@@ -121,7 +121,7 @@
 /* ======================Tablet=========================== */
 @media screen and (min-width: 768px) {
   .projects {
-    padding-top: 96px;
+    padding: 48px 0;
   }
 
   .projects-section-list {
@@ -170,7 +170,7 @@
 /* ======================Desktop=========================== */
 @media screen and (min-width: 1440px) {
   .projects {
-    padding-top: 164px;
+    padding: 82px 0;
   }
 
   .projects-section-list-card {

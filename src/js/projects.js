@@ -1,10 +1,10 @@
 import Swiper from 'swiper/bundle';
-// import 'swiper/css/bundle';
 
-const swiper = new Swiper('.swiper-container', {
-  speed: 500,
-  // loop: true,
+const projectsSectionSlider = document.querySelector(
+  '.projects-section-swiper-container'
+);
 
+const projectsSwiper = new Swiper(projectsSectionSlider, {
   navigation: {
     nextEl: '.projects-button.next',
     prevEl: '.projects-button.prev',
@@ -15,15 +15,6 @@ const swiper = new Swiper('.swiper-container', {
     onlyInViewport: true,
   },
 
-  //   ==============Flip==========
-  // effect: 'flip',
-  // speed: 1000,
-
-  //    ==============coverflow==========
-  // effect: 'coverflow',
-  // speed: 1100,
-
-  //    ==============cubeEffect==========
   effect: 'cube',
   speed: 1100,
 });
