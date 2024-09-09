@@ -67,7 +67,7 @@
 
 */
 
-.hero {
+/* .hero {
   height: 100%;
   padding: 32px 0;
   background: linear-gradient(
@@ -218,9 +218,9 @@
     padding: 18px 24px;
     width: 223px;
   }
-    .hero-navigation-link-email {
-      width: 175px;
-    }
+  .hero-navigation-link-email {
+    width: 175px;
+  }
   .hero-navigation-link {
     font-size: 16px;
     padding: 18px 18px;
@@ -236,4 +236,4 @@
   .hero-navigation {
     margin-top: 243px;
   }
-}
+} */
