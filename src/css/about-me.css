@@ -280,6 +280,11 @@
   width: 260px;
 }
 
+.about-me-swiper-container .swiper-slide-active {
+  background-color: var(--flame-red-color);
+  transition: background-color 1s;
+}
+
 .about-me-swiper-btn {
   display: flex;
   align-items: center;
@@ -324,9 +329,4 @@
   .about-me-swiper-container {
     width: 1200px;
   }
-}
-
-.about-me-swiper-container .swiper-slide-active {
-  background-color: var(--flame-red-color);
-  transition: background-color 1s;
 }
