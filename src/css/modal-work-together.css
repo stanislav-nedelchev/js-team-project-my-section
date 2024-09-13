@@ -1,13 +1,12 @@
 .modal-menu-dialog {
   border: none;
   padding: 0;
-  background-color:transparent;
-
+  background: rgba(15, 15, 16, 0.6);
+  width: 100%;
+  height: 100%;
   position: fixed;
   inset-block-start: 0px;
   inset-block-end: 0px;
-  max-width: calc((100%-6px)- 2em);
-  max-height: calc((100%-6px)- 2em);
   user-select: text;
   visibility: visible;
   overflow: auto;
@@ -16,53 +15,63 @@
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
+  z-index: 999;
 }
 
-.modal-menu-dialog[open]{
+dialog::backdrop {
+  background: rgba(15, 15, 16, 0.6);
+}
+
+.modal-menu-dialog[open] {
   opacity: 1;
   visibility: visible;
 }
 
-.modal-menu-dialog::backdrop{
+.modal-menu-dialog::backdrop {
   background: #0F0F10;
   opacity: 0.6;
 }
 
-.modal-inner{
+.modal-inner {
   border: 1px solid rgba(250, 250, 250, 0.1);
   border-radius: 20px;
   padding: 64px 32px;
+  min-width: 318px;
   max-width: 343px;
   height: 270px;
   background: #1c1d20;
   overflow: hidden;
   overflow-x: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.title-modal{
+.title-modal {
   color: #ffffff;
-font-weight: 600;
-font-size: 20px;
-letter-spacing: -0.02em;
-text-align: center;
-margin-bottom: 15px;
-text-transform: none;
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: none;
 }
 
-.paragraph-modal{
-text-align: center;
-color: rgba(250, 250, 250, 0.6);
+.paragraph-modal {
+  text-align: center;
+  color: rgba(250, 250, 250, 0.6);
 }
 
-.btn-svg-modal-icon{
+.btn-svg-modal-icon {
   position: absolute;
   top: 20px;
   right: 20px;
-  border:none;
+  border: none;
   background-color: transparent;
 }
 
-.close-modal-menu{
+.close-modal-menu {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -71,9 +80,9 @@ color: rgba(250, 250, 250, 0.6);
 
 
 @media only screen and (min-width: 768px) {
-  .modal-inner{
-padding: 60px;
-max-width: 490px;
-height: 245px;
+  .modal-inner {
+    padding: 60px;
+    max-width: 490px;
+    height: 245px;
   }
 }

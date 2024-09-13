@@ -52,6 +52,16 @@
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #ffffff;
+  transition: background-color 5000s ease-in-out 0s;
+  box-shadow: inset 0 0 20px 20px #23232329;
+}
+
 .form-span {
   position: absolute;
   transform: translateY(44px);
@@ -94,10 +104,106 @@
   margin-top: 32px;
   margin-bottom: 64px;
   align-self: center;
+  position: relative;
 }
 
 .work-together-form button:hover {
   background-color: #E0373F;
+}
+
+.work-together-form button img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  opacity: 0;
+  width: 42px;
+  height: 42px;
+}
+
+.is-active > span {
+  animation: disappear 0.3s ease-in-out;
+  animation-fill-mode: forwards
+}
+
+.is-active > img {
+  animation: appear 0.7s ease-in-out;
+  animation-fill-mode: forwards
+}
+
+.work-together-phone:hover {
+  animation: wiggle 1.5s linear infinite;
+}
+
+.work-together-email:hover {
+    animation: float 0.5s ease-out infinite;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+  20% {
+    color: #fff;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-5deg);
+  }
+  20% {
+    transform: rotateZ(2deg);
+  }
+  25% {
+    transform: rotateZ(-2deg);
+  }
+  30% {
+    transform: rotateZ(2deg);
+  }
+  35% {
+    transform: rotateZ(0deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes float {
+  25% {
+    transform: translate(1px, 0);
+  }
+  50% {
+    transform: translate(1px, -1px);
+  }
+  75% {
+    transform: translate(-1px, -1px);
+  }
+  100% {
+    transform: translate(-1px, 0);
+  }
 }
 
 .work-together-contacts {
@@ -168,6 +274,11 @@
     width: 150px;
     height: 150px;
     margin: 0;
+  }
+
+  .work-together-form button img {
+    width: 62px;
+    height: 62px;
   }
 
   .work-together-contacts a {

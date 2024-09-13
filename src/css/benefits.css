@@ -1,8 +1,8 @@
 .benefits {
   padding-top: 32px;
   padding-bottom: 32px;
+  scroll-behavior: smooth;
 }
-
 
 .benefits-title {
   font-weight: 600;
@@ -69,9 +69,11 @@
   color: #fafafa;
   margin-top: 32px;
 }
+
 .benefits-btn:hover {
   border: 1px solid #fafafa;
 }
+
 @media screen and (min-width: 768px) {
   .benefits {
     padding-top: 48px;
@@ -96,7 +98,6 @@
 
   .benefits-title {
     width: 284px;
-    
   }
 
   .container-benefits {
